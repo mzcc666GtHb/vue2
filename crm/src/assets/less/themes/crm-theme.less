@@ -1,0 +1,70 @@
+
+//字体大小
+@fBig:20px;             //用于标题
+@middle:16px;           //用于内容标题
+@samll:12px;            //用于标签文字 、底部tab文字
+
+//颜色
+@cWarning:#ef0000;      //警告
+@cDisabled:#f9f8f8;     //disabled颜色
+@cOne:#333;             //一级标题颜色
+@cTwo:#666;             //二级标题颜色
+@cThree:#999;           //三级标题颜色
+@cDivide:#ddd;          //分割线颜色
+@bgc:#f4f1f1;           //背景色
+
+//渐变色
+@blueStart:#55ccf9;     //蓝色渐变开始
+@blueEnd:#51aff9;       //蓝色渐变结束
+@orgStart:#f8d649;      //黄色开始
+@orgEnd:#f6cd45;        //黄色结束
+@blueBtnStart:#55ccf9;  //蓝色按钮开始
+@blueBtnEnd:#6dbfff;    //蓝色按钮结束
+
+.gradual-to-right(@start:@blueStart,@end:@blueEnd){
+  background-image:-webkit-linear-gradient(to right, @start,@end);
+  background-image:linear-gradient(to right, @start,@end);
+}
+
+.gradual-to-bottom(@start:@blueStart,@end:@blueEnd) {
+  background-image:-webkit-linear-gradient(to bottom, @start,@end);
+  background-image:linear-gradient(to bottom,@start,@end);
+}
+
+//圆角
+@radiusSize:4px;
+.border-radius (@radius: @radiusSize) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+
+//表单元素重置
+.reset-form(){
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+//垂直居中(父元素设置相对定位)
+.vc{
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+//水平垂直居中(父元素设置相对定位)
+.vc-hc{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+//文字溢出隐藏(需配合宽度)
+.ellipsis(){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
